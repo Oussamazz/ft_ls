@@ -6,7 +6,7 @@
 /*   By: oelazzou <oelazzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 17:52:14 by oelazzou          #+#    #+#             */
-/*   Updated: 2019/10/17 15:21:07 by oelazzou         ###   ########.fr       */
+/*   Updated: 2019/12/10 16:13:07 by oelazzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char		**alloc_current(char **arr)
 	return (arr);
 }
 
-bool			flag_checker(char *str)
+bool		flag_checker(char *str)
 {
 	int		i;
 	char	*arr;

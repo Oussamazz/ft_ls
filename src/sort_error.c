@@ -6,7 +6,7 @@
 /*   By: oelazzou <oelazzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/06 10:27:44 by oelazzou          #+#    #+#             */
-/*   Updated: 2019/10/10 15:36:03 by oelazzou         ###   ########.fr       */
+/*   Updated: 2019/12/10 16:02:50 by oelazzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	**get_errors(char **arr, int no_paths, t_arg **tab)
 
 	i = 0;
 	j = 0;
-	ret = (char **)ft_memalloc(sizeof(*ret) * (no_paths + 1));
+	if (!(ret = (char **)ft_memalloc(sizeof(*ret) * (no_paths + 1))))
+		return (NULL);
 	while (i < no_paths)
 	{
 		if (lstat(arr[i], &sb) == -1)

@@ -6,7 +6,7 @@
 #    By: oelazzou <oelazzou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/23 20:13:16 by oelazzou          #+#    #+#              #
-#    Updated: 2019/10/17 14:23:20 by oelazzou         ###   ########.fr        #
+#    Updated: 2019/12/10 15:55:00 by oelazzou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,6 @@ SRC_NAME = 	arguments.c \
 		reg_files.c \
 		stock_dirs.c \
 		stack_functions.c
-
 
 SRCS = $(addprefix $(SRC_DIR), $(SRC_NAME))
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_NAME:.c=.o))

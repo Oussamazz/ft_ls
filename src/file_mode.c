@@ -40,20 +40,11 @@ bool	is_reg(const char *arr)
 	return (0);
 }
 
-bool	check_cmp_type(struct stat *sb, struct stat *sb2)
-{
-	if (check_dir(sb) && check_dir(sb2))
-		return (1);
-	else if (!check_dir(sb) && !check_dir(sb2))
-		return (1);
-	return (0);
-}
-
 int		check_dir(struct stat *sb)
 {
-	if ((sb->st_mode & S_IFMT) == S_IFDIR)
+	if (S_ISDIR(sb->st_mode))
 		return (1);
-	if ((sb->st_mode & S_IFMT) == S_IFLNK)
+	if ((S_ISLNK(sb->st_mode)))
 		return (2);
 	return (0);
 }

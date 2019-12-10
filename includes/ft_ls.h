@@ -6,7 +6,7 @@
 /*   By: oelazzou <oelazzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 21:28:19 by oelazzou          #+#    #+#             */
-/*   Updated: 2019/10/17 15:20:52 by oelazzou         ###   ########.fr       */
+/*   Updated: 2019/12/10 15:50:41 by oelazzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ time_t heure, t_arg **tab);
 t_sizes				*get_sizes(struct stat *sb, t_sizes *size);
 t_sizes				*init_values(void);
 t_arg				*stock_flags(int ac, char **av);
-int					flag_checker(char *str);
+bool					flag_checker(char *str);
 bool				checking_flags(const char *arr, t_arg **tab);
 char				**directories(int ac, t_arg **tab);
 char				**alloc_current(char **arr);
@@ -136,7 +136,6 @@ void				print_symlink_name(char *str);
 char				*get_symlink(const char *path);
 void				ls_l(char *arr, t_arg **args);
 bool				is_reg(const char *arr);
-bool				check_cmp_type(struct stat *sb, struct stat *sb2);
 int					check_dir(struct stat *sb);
 void				ls_capr(char *arr, t_arg **args);
 void				ls_recursive(const char *path_name,
@@ -171,4 +170,5 @@ void				push_stack(t_stack **head, t_file *files);
 bool				is_empty(t_stack *stack);
 void				in_order(t_file *root);
 void				reverse_order(t_file *root);
+bool	is_file_exist(char *str);
 #endif
