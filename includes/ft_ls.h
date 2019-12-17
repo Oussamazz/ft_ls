@@ -6,7 +6,7 @@
 /*   By: oelazzou <oelazzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 21:28:19 by oelazzou          #+#    #+#             */
-/*   Updated: 2019/12/10 15:50:41 by oelazzou         ###   ########.fr       */
+/*   Updated: 2019/12/17 17:23:13 by oelazzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ typedef struct		s_sizes
 	int				size_major;
 	int				size_minor;
 }					t_sizes;
+
 void				insert(t_file **node, const char *data,
 time_t heure, t_arg **tab);
 void				print_asciiorder(t_file *node);
@@ -95,7 +96,7 @@ time_t heure, t_arg **tab);
 t_sizes				*get_sizes(struct stat *sb, t_sizes *size);
 t_sizes				*init_values(void);
 t_arg				*stock_flags(int ac, char **av);
-bool					flag_checker(char *str);
+bool				flag_checker(char *str);
 bool				checking_flags(const char *arr, t_arg **tab);
 char				**directories(int ac, t_arg **tab);
 char				**alloc_current(char **arr);
@@ -170,5 +171,5 @@ void				push_stack(t_stack **head, t_file *files);
 bool				is_empty(t_stack *stack);
 void				in_order(t_file *root);
 void				reverse_order(t_file *root);
-bool	is_file_exist(char *str);
+bool				is_file_exist(char *str);
 #endif
